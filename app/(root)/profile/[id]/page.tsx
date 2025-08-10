@@ -1,14 +1,19 @@
 import React from "react";
 import Header from "@/components/Header";
-import DropdownList from "@/components/DropdownList";
+import { dummyCards } from "@/constants";
+import VideoCard from "@/components/VideoCard";
 
 const Page = async ({params}: ParamsWithSearch) => {
     const {id} = await params;
     return (
         <div className="wrapper page">
             <Header title="Ajitesh | Developer" SubHeader="nucking.aj21@gmail.com" usrImg="/assets/images/dummy.jpg"/>
-            <DropdownList />
-            <h1 className="text-2xl font-karla">USER ID: {id}</h1>
+            
+            <section className="video-grid">
+                {dummyCards.map((card) => (
+                    <VideoCard key={card.id} {...card} />
+                ))}
+            </section>
         </div>
     )
 };

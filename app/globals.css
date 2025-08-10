@@ -102,7 +102,7 @@
   }
 
   .video-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
   }
 
   /* sign in page */
@@ -112,33 +112,29 @@
     .testimonial {
       @apply bg-light-100 lg:w-1/2 flex flex-col justify-between lg:h-screen w-full py-10 px-6 lg:pl-10 gap-6;
 
-      a {
+      .logo-link {
         @apply flex items-center gap-2.5;
       }
 
-      h1 {
-        @apply text-xl font-black text-blue-100 font-satoshi -tracking-[0.5px];
-      }
-
       .description {
-        @apply flex items-center justify-center;
+        @apply flex flex-col items-center justify-center flex-1;
 
         section {
           @apply flex flex-col items-center justify-center gap-8 px-6 sm:px-8 w-full max-w-2xl;
 
-          figure {
+          .stars {
             @apply flex items-center gap-1 justify-center;
           }
 
-          p {
+          .testimonial-text {
             @apply text-3xl font-semibold text-dark-100 text-center -tracking-[2px];
           }
 
-          article {
+          .user-testimonial {
             @apply flex flex-col gap-2.5 items-center;
 
-            div {
-              @apply flex flex-col items-center gap-1;
+            .user-info {
+              @apply flex flex-col items-center gap-1 text-center;
 
               h2 {
                 @apply text-base font-bold text-dark-100;
@@ -152,9 +148,13 @@
         }
       }
 
-      p {
-        @apply text-sm font-medium text-gray-100;
+      .copyright {
+        @apply text-center text-sm text-gray-100;
       }
+
+              h1 {
+          @apply text-xl font-black text-blue-100 font-satoshi -tracking-[0.5px];
+        }
     }
 
     .google-sign-in {
@@ -181,6 +181,13 @@
 
         button {
           @apply w-full flex justify-center items-center gap-2.5 bg-white border border-gray-25 rounded-4xl py-4 text-base text-dark-100 font-semibold cursor-pointer -tracking-[0.8px];
+        }
+
+        .google-btn {
+          @apply flex justify-center items-center gap-2.5 
+                  bg-white border border-gray-25 rounded-4xl 
+                  py-4 px-6 text-base text-dark-100 font-semibold 
+                  cursor-pointer -tracking-[0.8px] w-65 mx-auto;
         }
       }
     }
@@ -487,7 +494,7 @@
 
   /* video-card */
   .video-card {
-    @apply flex flex-col rounded-2xl w-full border border-gray-20 aspect-[16/9] relative;
+    @apply flex flex-col rounded-2xl w-full max-w-[290px] border border-gray-20 aspect-[16/9] relative;
 
     .thumbnail {
       @apply w-full rounded-t-2xl object-cover h-[190px];
