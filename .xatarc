@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Ajitesh-Singh-s-workspace-vhrieu.ap-southeast-2.xata.sh/db/Castly",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
